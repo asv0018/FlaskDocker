@@ -1,6 +1,6 @@
 from flask import Flask, render_template,flash,redirect,url_for,request,session,logging
 from data import Articles
-import mysql.connector
+from flask_mysql_connector import MySQL
 from wtforms import Form,StringField,TextAreaField,PasswordField,validators
 from passlib.hash import sha256_crypt
 from functools import wraps
@@ -15,7 +15,7 @@ app.config['MYSQL_DB']='myflaskapp'
 app.config['MYSQL_CURSORCLASS']='DictCursor'
 
 # init MYSQL
-mysql= mysql.connector.connect(app)
+mysql= MySQL(app)
 
 # Articles=Articles()
 
