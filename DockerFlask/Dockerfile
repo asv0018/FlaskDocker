@@ -3,7 +3,8 @@ MAINTAINER shreevallabhas@gmail.com
 
 RUN apt-get update -y
 RUN apt-get install python3-pip -y
-RUN apt-get build-essential libmysqlclient-dev
+RUN apt-get build-essential
+RUN apt-get libmysqlclient-dev
 RUN apt-get install gunicorn -y
 
 COPY requirements.txt requirements.txt
