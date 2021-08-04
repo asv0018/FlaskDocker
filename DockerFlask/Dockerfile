@@ -5,7 +5,7 @@ RUN apt-get update -y
 RUN apt-get install python3-pip -y
 RUN apt-get install gunicorn -y
 
-COPY requirements.txt requirements.txt
+COPY /simpleflask/requirements.txt requirements.txt
 COPY simpleflask /opt/
 
 RUN pip3 install -r requirements.txt
